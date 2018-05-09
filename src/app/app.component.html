@@ -1,0 +1,28 @@
+<section class="todolist">
+  <div class="container">
+    <div class="row">
+      <form [formGroup]="todoForm">
+        <div class="form-group col-md-6">
+          <label>Please add item to the to-do list</label>
+          <input type="text" class="form-control" name="description" placeholder="add item" formControlName="description">
+        </div>
+        <div class="col-md-6">
+          <button class="btn btn-primary mt-1-7" type="submit" (click)="addItem(todoForm)">Add</button>
+        </div>
+      </form>
+    </div>
+    <div class="row checkmark">
+      <ul>
+        <li *ngFor="let todo of todoList">
+          <input type="checkbox" [(ngModel)]="todo.checkItem" (change)="update(todo.id)">
+          <label>
+            {{ todo.description }}
+          </label>
+        </li>
+      </ul>
+    </div>
+    <div class=" col-md-6 text-center">
+      <button class="btn btn-primary text-center" type="submit" (click)="delteItems()">Delete</button>
+    </div>
+  </div>
+</section>

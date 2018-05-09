@@ -1,0 +1,39 @@
+ul {
+    list-style: none;
+    margin-top: 0; 
+    margin-bottom: 10px; 
+}
+
+li { background: #f9f9f9; }
+li:nth-child(odd) { background: #eee; }
+
+li{
+    margin-left: -20px;
+}
+
+.todolist {
+    padding: 5em 9em;
+}
+
+input[type="checkbox"] {
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    position: relative;
+    top: 4px;
+    left: 5px;
+  }
+
+  label {
+      padding-left: 10px;
+  }
+
+  .checkmark {
+      width: 50%;
+      height: 200px;
+      overflow-y: scroll;
+  }
+
+  .mt-1-7 {
+    margin-top: 1.7em;
+  }
